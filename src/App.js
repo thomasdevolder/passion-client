@@ -14,12 +14,14 @@ import useFetch from './hooks/useFetch'
 
 
 function App() {
-  const { loading, error, data} = useFetch('http://localhost:1337/api/guests')
+
+  console.log(process.env.REACT_APP_SERVER_URL)
+  const { loading, error, data} = useFetch(`${process.env.REACT_APP_SERVER_URL}/api/guests` || "http://localhost:1337/api/guests")
 
   if(loading) return(<p>Loading...</p>)
   if(error) return (<p>Error :(</p>)
 
-  console.log(data.data[0].attributes);
+  console.log(data.data);
 
   return (
     <Router>
