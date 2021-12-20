@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="105" viewBox="0 0 70 105">
+  <g id="Group_6" data-name="Group 6" transform="translate(-41 -15)">
+    <text id="_17" data-name="17" transform="translate(61 45)" fill="#fff" font-size="31" font-family="HelveticaNeue-Light, Helvetica Neue" font-weight="300"><tspan x="-17.236" y="0">17</tspan></text>
+    <text id="_12" data-name="12" transform="translate(93 76)" fill="#fff" font-size="31" font-family="HelveticaNeue-Light, Helvetica Neue" font-weight="300"><tspan x="-17.236" y="0">12</tspan></text>
+    <text id="_22" data-name="‘22" transform="translate(62 114)" fill="#fff" font-size="30" font-family="HelveticaNeue-Light, Helvetica Neue" font-weight="300"><tspan x="-20.85" y="0">‘22</tspan></text>
+    <line id="Line_1" data-name="Line 1" x2="42" transform="translate(68.5 72.651) rotate(45)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="Line_2" data-name="Line 2" x2="42" transform="translate(68.5 57.198) rotate(-45)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

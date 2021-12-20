@@ -1,0 +1,138 @@
+.container {
+    width: 95vw;
+    color: white;
+    margin-left: 5vw;
+}
+
+body {
+    overflow-y: auto;
+}
+
+.title {
+    margin-top: 2rem;
+    padding-left: 2rem;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.visualizer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.video {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    font-weight: 100;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.photo {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    font-weight: 100;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.switchMiddle {
+    padding: 0rem 2rem;
+}
+
+.switchLeft, .switchRight {
+    color: white;
+    text-decoration: none;
+}
+
+.business {
+    font-family: 'Saol Display'; 
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img {
+    width: 40vw;
+    height: auto;
+    justify-self: center;
+    margin-top: -7rem;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.description {
+    width: 25vw;
+    margin-left: 3vw;
+    font-size: 1.3rem;
+    line-height: 140%;
+    padding-right: 3rem;
+}
+
+.website {
+    width: 25vw;
+    margin-right: 3vw;
+    padding-left: 2rem;
+    font-size: 3.9rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.websiteName {
+    font-weight: 100; 
+    text-transform: uppercase;
+}
+
+.anime {
+    width: 95vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+.video::after {
+    position: absolute;
+    top: 5.5rem;
+    left: -0.5%;
+    width: 45%; 
+    height: .1rem; 
+    content: '';
+    background: white;
+}
+
+.photo::after {
+    position: absolute;
+    top: 5.5rem;
+    left: 55%;
+    width: 45%; 
+    height: .1rem; 
+    content: '';
+    background: white;
+}

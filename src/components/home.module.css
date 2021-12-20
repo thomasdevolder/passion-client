@@ -1,0 +1,150 @@
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 5vw;
+    justify-content: space-between; 
+    align-items: center;
+    border-right: solid .1rem white;
+    z-index: 20;
+    background-color: #0D0D0D;
+}
+
+.navShow {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 50vw;
+    justify-content: space-between; 
+    align-items: flex-start;
+    border-right: solid .1rem white;
+    background-color: #0D0D0D
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    flex-flow: row;
+}
+
+.logo {
+    padding: .5rem 1rem;
+}
+
+.menuIcon {
+    padding: 0rem 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+
+
+.overlays {
+    display: flex;
+    flex-flow: row;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.organize {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 100vh;
+    z-index: 20;
+    position: fixed;
+    right: 0;
+}
+
+.organisation {
+    padding: 2rem;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.accept {
+    align-self: flex-end;
+    padding: 2rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: solid white .1rem; 
+    border-radius: 50%;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
+.accept:hover {
+    color: black;
+    background-color: white;
+}
+
+.navMiddle {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.navList {
+    display: flex;
+    flex-flow: column;
+    list-style-type: none;
+    margin-left: 2rem;
+}
+
+.navItem {
+    font-size: 5rem;
+    opacity: 0;
+    margin-left: -20rem;
+}
+
+.navItemStyle {
+    color: white;
+    text-decoration: none;
+    font-family:  Helvetica, sans-serif; 
+    font-weight: 300;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.navItemStyle:hover {
+    font-weight: bold;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.curtain {
+    width: 100vw;
+    height: 100vh; 
+    background-color: white;
+    position: absolute;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0D0D0D; 
+    z-index: 19;
+    display: none;
+}
+
+.arrow {
+    transform: scale(.9)
+}
+

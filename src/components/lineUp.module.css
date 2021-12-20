@@ -1,0 +1,74 @@
+body {
+    overflow: hidden;
+}
+
+.main {
+    width: 95vw; 
+    margin-left: 5vw;
+    height: 100vh;
+}
+
+
+
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    z-index: -20;
+    opacity: 0%; 
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    align-self: flex-start;
+}
+
+.lineUp {
+    width: 95vw;
+    display: flex;
+    flex-flow: column;
+    
+} 
+
+.vinyl {
+    position: absolute;
+    transform-origin: center;
+}
+
+.artist {
+    margin-top: -10vh;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img {
+    width: 20vw;
+    height: auto;
+    margin-top: 10rem;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.info {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 95vw;
+    height: 50vh;
+    position: absolute;
+}
+
+.description {
+    width: 20vw;
+    margin-top: 10rem;
+    font-size: 1.3rem;
+    line-height: 140%;
+    background-color: black;
+    z-index: 12;
+}
