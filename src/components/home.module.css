@@ -149,3 +149,27 @@
     transform: scale(.9)
 }
 
+@media only screen and (max-width: 1400px) {
+    .nav {
+        width: 10vw;
+    }
+
+    .navShow {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .nav {
+        width: 20vw;
+    }
+
+    .navShow {
+        width: 100vw;
+    }
+
+    .navItem {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+}
