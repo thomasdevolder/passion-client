@@ -1,3 +1,65 @@
+@font-face {
+    font-family: 'Saol Display';
+    src: url('assets/fonts/SaolDisplay-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica-BoldOblique.woff2') format('woff2'),
+        url('assets/fonts/Helvetica-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica.woff2') format('woff2'),
+        url('assets/fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica-Bold.woff2') format('woff2'),
+        url('assets/fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica-LightOblique.woff2') format('woff2'),
+        url('assets/fonts/Helvetica-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica-Oblique.woff2') format('woff2'),
+        url('assets/fonts/Helvetica-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('assets/fonts/Helvetica-Light.woff2') format('woff2'),
+        url('assets/fonts/Helvetica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

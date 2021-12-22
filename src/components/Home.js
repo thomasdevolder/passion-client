@@ -26,6 +26,7 @@ import campingImg from '../assets/img/camping.jpg'
 
 const Home = () => {
     const [songPlaying, setSongPlaying] = useState(false);
+    const [isGoing, setIsGoing] = useState('accept invite'); 
 
     const [menu, showMenu] = useState(false); 
     const [image, changeImage] = useState(homeImg); 
@@ -196,7 +197,7 @@ const Home = () => {
                     </div>
                     <div className={styles.organize}>
                         <a className={styles.organisation} target="_blank" href="https://www.voldercompany.be">A VOLDER EVENT</a>
-                        <p className={styles.accept}>Accept<br/>Invite</p>
+                        <p onClick={() => setIsGoing("you're going")} className={styles.accept}>{isGoing}</p>
                     </div>
                 
                 <Routes>

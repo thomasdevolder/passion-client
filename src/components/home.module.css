@@ -82,6 +82,7 @@
     border-radius: 50%;
     transition: all .3s ease-in;
     cursor: pointer;
+    width: 6rem;
 }
 
 .accept:hover {

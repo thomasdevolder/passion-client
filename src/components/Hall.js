@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import styles from './hall.module.css'
 import { Canvas, meshPhongMaterial, useFrame } from '@react-three/fiber'
-import { Html, RoundedBox, useGLTF, PresentationControls, Environment, ScrollControls } from "@react-three/drei"
+import { Html, RoundedBox, useGLTF, PresentationControls, Environment, ScrollControls, Scroll } from "@react-three/drei"
 import zaal from '../assets/models/zaal.gltf'
 import ZaalRealOne from './ZaalRealOne'
 import Spline from './Spline'
@@ -37,12 +37,20 @@ const Hall = () => {
                     <Environment preset="night" background={false}/>
                         <mesh position={[0,35,0]}>
                             <ScrollControls pages={5}>
+                                 <Scroll html style={{ width: '100%' }}>
+                                    <p className={styles.room}>Ingang</p>
+                                    <p className={styles.room2}>Vestiare</p>
+                                    <p className={styles.room2}>BAR</p>
+                                    <p className={styles.room2}>dj Booth</p>
+                                    <p className={styles.room2}>Toiletten</p>
+                                    <p className={styles.room}>Backstage</p>
+                                </Scroll>
                                  <ZaalRealOne/>
                             </ScrollControls>
+                           
                         </mesh>
-             
+                       
                 </Suspense>
-              
             </Canvas>
         </main>
         
