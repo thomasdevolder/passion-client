@@ -67,4 +67,34 @@
     grid-template-columns: repeat(3, 20vw); 
     gap: 5vw;
     margin-top: -10rem;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        flex-flow: column;
+        margin-left: 20vw;
+        width: 80vw;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .grid {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .person, .person1, .person2, .person3, .person4, .person5, .person6 {
+        width: 60vw;
+        margin-top: 0;
+    }
+
+    .person {
+        margin-top: 10rem;
+    }
+
+    .img {
+        height: auto;
+        width: 60vw;
+    }
 }

@@ -31,7 +31,10 @@ const Home = () => {
     const [menu, showMenu] = useState(false); 
     const [image, changeImage] = useState(homeImg); 
     const [start, setStart] = useState(false); 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const imgHall = hallImg
+    const [navW, setNavW] = useState("5vw"); 
+    const [navShowW, setNavShowW] = useState("50vw")
 
     let curtain = useRef();
     let loading = useRef()
@@ -68,6 +71,24 @@ const Home = () => {
         setStart(true);
     }, [history])
 
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWindowWidth(window.innerWidth)
+        })
+    })
+
+    useEffect(() => {
+        console.log("w", windowWidth); 
+        if(windowWidth <800) {
+            setNavW("20vw")
+            setNavShowW("100vw")
+        }
+        else if(windowWidth < 1400) {
+            setNavW("10vw")
+            setNavShowW("70vw")
+        }
+    }, [windowWidth])
+
 
     //Vars for our animated dom nodes 
     let nav = useRef(null);
@@ -89,7 +110,7 @@ const Home = () => {
             showMenu(false);
             gsap.to([nav], {
                 duration: .5,
-                width: "5vw",
+                width: navW,
                 alignItems: "center",
                 height: "100%",
                 ease: "Power3.inOut",
@@ -113,7 +134,7 @@ const Home = () => {
         } else {
             gsap.to([nav], {
                 duration: .5,
-                width: "50vw",
+                width: navShowW,
                 alignItems: "flex-start",
                 height: "100%",
                 ease: "Power3.inOut",
@@ -195,16 +216,15 @@ const Home = () => {
                         </div>
                         <BackgroundMusic songPlaying={songPlaying} setSongPlaying={(e) => {setSongPlaying(e)}} ref={el => {sound = el}}/>
                     </div>
-                    <div className={styles.organize}>
-                        <a className={styles.organisation} target="_blank" href="https://www.voldercompany.be">A VOLDER EVENT</a>
-                        <p onClick={() => setIsGoing("you're going")} className={styles.accept}>{isGoing}</p>
-                    </div>
                 
+                    <a className={styles.organisation} target="_blank" href="https://www.voldercompany.be">A VOLDER EVENT</a>
+                    <p onClick={() => setIsGoing("you're going")} className={styles.accept}>{isGoing}</p>
+            
                 <Routes>
                 <Route path="/start" element={<Start homeImage={image}/>} />
                 <Route path="/camping" element={<Camping/>} />
                 <Route path="/hall" element={<Hall/>} />
-                <Route path="/lineUp" element={<LineUp scratch={scratchMusic} needleOn={songPlaying} setNeedleOn={(e) => setSongPlaying(e)}/>} />
+                <Route path="/lineUp" element={<LineUp ww={windowWidth} scratch={scratchMusic} needleOn={songPlaying} setNeedleOn={(e) => setSongPlaying(e)}/>} />
                 <Route path="/dressCode" element={<DressCode/>} />
                 <Route path="/photographer/*" element={<Photographer/>} />
                 <Route path="/guestList" element={<GuestList/>} />

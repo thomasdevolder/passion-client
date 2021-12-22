@@ -102,4 +102,30 @@ body {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 700px) {
+    .djContent {
+        flex-flow: column;
+        align-items: flex-start; 
+        justify-content: flex-start
+    }
+
+    .main {
+        width: 80vw;
+        margin-left: 20vw;
+        height: 100vh;
+    }
+
+    .description {
+        width: 75vw;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .vinyl {
+        margin-top: -50vw;
+    }
+}
+
 

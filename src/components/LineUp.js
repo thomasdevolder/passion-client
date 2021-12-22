@@ -10,9 +10,9 @@ import boardx from '../assets/img/lineUpBoardx.png'
 
 gsap.registerPlugin(Draggable);
 
-const LineUp = ({scratch, needleOn, setNeedleOn}) => {
+const LineUp = ({scratch, needleOn, setNeedleOn, ww}) => {
     
-    
+    const [vinylPosition, setVinylPosition] = useState(.025)
 
     let vinyl = useRef();
     let needle = useRef(); 
@@ -23,9 +23,10 @@ const LineUp = ({scratch, needleOn, setNeedleOn}) => {
 
     useEffect(()=>{ 
         console.log(vinyl);
-        console.log(window.innerWidth/2+(window.innerWidth*0.05)-550)
+        console.log((ww)/2-550+(window.innerWidth*0.025), (window.innerWidth*0.025))
         vinyl.style.left = (window.innerWidth)/2-550+(window.innerWidth*0.025)
         vinyl.style.top = (window.innerHeight)-350; 
+        needle.current.style.left= (window.innerWidth)/2-550+(window.innerWidth*0.025) - 200
 
         handleRotation(dj1.current, 0, 0)
         handleRotation(dj2.current, 90, 0)
@@ -36,7 +37,7 @@ const LineUp = ({scratch, needleOn, setNeedleOn}) => {
         
         initRotate(); 
         
-    }, [])
+    }, [ww])
 
     useEffect(()=> {
         if(needleOn) {
@@ -62,7 +63,7 @@ const LineUp = ({scratch, needleOn, setNeedleOn}) => {
     const handleRotation = (element, offset, scroll) => {
         let centerX = window.innerWidth/2-window.innerWidth*0.475;;
         let centerY = window.innerHeight 
-        let radius = window.innerWidth/2;
+        let radius = window.innerHeight*.87;
 
         const radians = (scroll - offset) * Math.PI / 180;
 

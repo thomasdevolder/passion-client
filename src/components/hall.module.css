@@ -27,3 +27,20 @@
     margin-left: 2rem;
 } 
 
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 90vw;
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 80vw;
+        margin-left: 20vw; 
+    }
+
+    .room, .room2 {
+        font-size: 1.5rem;
+    }
+}
