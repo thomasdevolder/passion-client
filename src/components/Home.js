@@ -25,6 +25,7 @@ import photographerImg from '../assets/img/darkRoom.jpg'
 import campingImg from '../assets/img/camping.jpg'
 
 const Home = () => {
+    const [songPlaying, setSongPlaying] = useState(false);
 
     const [menu, showMenu] = useState(false); 
     const [image, changeImage] = useState(homeImg); 
@@ -156,6 +157,10 @@ const Home = () => {
         changeImage(homeImg)
     }
 
+    const scratchMusic = () => {
+        console.log('scratch')
+    }
+
     return(
         <>
             <div ref={el => curtain = el} className={styles.curtain}><p ref={el => loading = el}>LOADING...</p></div>
@@ -187,7 +192,7 @@ const Home = () => {
                                 </g>
                             </svg>
                         </div>
-                        <BackgroundMusic ref={el => {sound = el}}/>
+                        <BackgroundMusic songPlaying={songPlaying} setSongPlaying={(e) => {setSongPlaying(e)}} ref={el => {sound = el}}/>
                     </div>
                     <div className={styles.organize}>
                         <a className={styles.organisation} target="_blank" href="https://www.voldercompany.be">A VOLDER EVENT</a>
@@ -198,7 +203,7 @@ const Home = () => {
                 <Route path="/start" element={<Start homeImage={image}/>} />
                 <Route path="/camping" element={<Camping/>} />
                 <Route path="/hall" element={<Hall/>} />
-                <Route path="/lineUp" element={<LineUp/>} />
+                <Route path="/lineUp" element={<LineUp scratch={scratchMusic} needleOn={songPlaying} setNeedleOn={(e) => setSongPlaying(e)}/>} />
                 <Route path="/dressCode" element={<DressCode/>} />
                 <Route path="/photographer/*" element={<Photographer/>} />
                 <Route path="/guestList" element={<GuestList/>} />

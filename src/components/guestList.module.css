@@ -1,0 +1,70 @@
+.container {
+    width: 95vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-flow: row;
+    align-items: space-around;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    justify-self: flex-start;
+}
+
+.person {
+    margin-top: 20rem;
+}
+
+.person2 {
+    margin-top: 40rem;
+}
+
+.person3 {
+    margin-top: 60rem;
+}
+
+.person4 {
+    margin-top: -40rem;
+} 
+
+.person5 {
+    margin-top: -20rem;
+}
+
+.person6 {
+    margin-top: 0rem;
+}
+
+.img {
+    width: 20vw;
+    filter: saturate(0);
+    transition: .3s ease-in-out filter;
+}
+
+.img:hover {
+    filter: saturate(1)
+}
+
+.detail {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-family: Saol Display; 
+    font-size: 1.3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw); 
+    gap: 5vw;
+    margin-top: -10rem;
+}

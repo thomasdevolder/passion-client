@@ -3,9 +3,8 @@ import styles from './backgroundMusic.module.css'
 import murphy from '../assets/music/outsideClub.mp3'
 
 
-const BackgroundMusic = () => {
+const BackgroundMusic = ({songPlaying, setSongPlaying}) => {
 
-    const [songPlaying, setSongPlaying] = useState(false);
     const [initial, setInitial] = useState(false); 
 
 

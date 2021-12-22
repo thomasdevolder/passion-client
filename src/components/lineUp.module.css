@@ -57,18 +57,49 @@ body {
 
 .info {
     display: flex;
-    flex-flow: row;
-    justify-content: space-around;
+    flex-flow: column;
+    align-items: center;
     width: 95vw;
     height: 50vh;
     position: absolute;
+    margin-left: 2.5vw;
 }
 
 .description {
-    width: 20vw;
-    margin-top: 10rem;
+    width: 35vw;
     font-size: 1.3rem;
     line-height: 140%;
-    background-color: black;
-    z-index: 12;
 }
+
+.video {
+    margin-right: 5vw;
+    margin-left: 2rem;
+}
+
+.djContent {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.djHour {
+    margin-top: 25rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.djName {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.needle {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+

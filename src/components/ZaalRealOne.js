@@ -14,13 +14,24 @@ export default function Model({ ...props }) {
 
   const scroll = useScroll()
   useFrame((state, delta) => {
-    const offset = 1 - scroll.offset; 
-    //console.log(offset); 
-    state.camera.position.set(offset * -5000, 500 , offset * -2000)
-    if(offset < .800) {
-      state.camera.lookAt(2000, 400, 3000)
-    } else { 
-      state.camera.lookAt(2000, 400, -3000)
+    const offset = .5 - scroll.offset; 
+    let sideOffset
+    if(offset > 0) {
+      sideOffset = offset - .5
+    } else if (offset < 0) {
+      sideOffset = - Math.abs(offset + .3)
+    }
+
+    console.log(sideOffset, offset)
+    state.camera.position.set(-offset * -7000, 300 , sideOffset * 1500) 
+    if(offset > .32) {
+      state.camera.lookAt(0, 400, 0)
+    } else if (offset < .33 && offset > .22) { 
+      state.camera.lookAt(2000, 400, -1000)
+    } else if (offset < .22 && offset > .08) {
+      state.camera.lookAt(0, 400, -1500)
+    } else if (offset <.08) {
+      state.camera.lookAt(-3000, 0, -800)
     }
     
   })

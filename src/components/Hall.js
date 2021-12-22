@@ -36,9 +36,8 @@ const Hall = () => {
                 <Suspense fallback={null}>
                     <Environment preset="night" background={false}/>
                         <mesh position={[0,35,0]}>
-                            <ScrollControls pages={10}>
-                            <ZaalRealOne/>
-                    
+                            <ScrollControls pages={5}>
+                                 <ZaalRealOne/>
                             </ScrollControls>
                         </mesh>
              
